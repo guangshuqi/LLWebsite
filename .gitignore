@@ -1,5 +1,5 @@
 # Virtualenv
-py_django
+py_django/
 
 #vscode
-.vscode
+.vscode/
