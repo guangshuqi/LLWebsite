@@ -6,3 +6,4 @@ class Job(models.Model):
     summary = models.CharField(max_length=200)
     startdate = models.DateField()
     enddate = models.DateField()
+    company = models.CharField(max_length=100)
