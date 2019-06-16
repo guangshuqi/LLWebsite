@@ -1,7 +1,15 @@
-<h1>All my jobs</h1>
-
-{% for job in jobs.all%}
-
-{{job.summary}}
-
+{%extends "users/base.html"%}
+{% block content %}
+{% for job in jobs %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <a class="mr-2" href="#">{{ job.jobtitle }}</a>
+            <small class="text-muted">{{ job.startdate }} to {{ job.enddate }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ job.jobtitle }}</a></h2>
+        <p class="article-content">{{ job.summary }}</p>
+    </div>
+</article>
 {% endfor %}
+{% endblock content %}
